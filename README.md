@@ -2,6 +2,7 @@
 
 A simple **Rofi-based wallpaper picker** for Linux.
 It lets you browse wallpapers from a directory and select one to set as your desktop wallpaper.
+<br><br>
 ![showcase](showcase1.png)
 
 ## ✨ Features
