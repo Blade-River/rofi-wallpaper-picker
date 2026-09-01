@@ -2,16 +2,13 @@
 
 A simple **Rofi-based wallpaper picker** for Linux.
 It lets you browse wallpapers from a directory and select one to set as your desktop wallpaper.
-
-Designed primarily for **Hyprland**, but the script can be launched from a terminal, keybind, or any other method you prefer.
+![showcase](showcase1.png)
 
 ## ✨ Features
 
 * 🖼️ Browse wallpapers using Rofi
 * ⚡ Quickly change wallpapers
-* ⌨️ Launch using a Hyprland keybind
 * 📁 Supports a custom wallpaper directory
-* 🐧 Designed for Arch Linux / Hyprland
 
 ---
 
