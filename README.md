@@ -31,12 +31,6 @@ Copy the Rofi configuration file from this repository into your Rofi configurati
 ```bash
 cp rofi/* ~/.config/rofi/
 ```
-
-If your repository contains a specific Rofi config file, you can instead copy it directly:
-
-```bash
-cp rofi/<your-rofi-file> ~/.config/rofi/
-```
 ---
 
 ### 3. Copy the scripts
