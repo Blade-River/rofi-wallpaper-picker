@@ -27,18 +27,11 @@ cd rofi-wallpaper-picker
 Copy the Rofi configuration file from this repository into your Rofi configuration directory:
 
 ```bash
-cp rofi/* ~/.config/rofi/
+cp -r rofi/* ~/.config/rofi/
 ```
 ---
 
-### 3. Copy the scripts
-
-Copy the scripts from the `scripts` folder into your local scripts directory:
-
-```bash
-mkdir -p ~/.config/rofi/scripts
-cp scripts/* ~/.config/rofi/scripts/
-```
+### 3. make executable
 
 Make the wallpaper script executable:
 
