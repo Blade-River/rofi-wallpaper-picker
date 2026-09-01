@@ -7,7 +7,7 @@ WALLDIR="/home/anubhav/Pictures/O/"
 CACHEDIR="$HOME/.cache/rofi-wall"
 
 # rofi theme
-ROFI_THEME="$HOME/.config/rofi/wallSelect.rasi"
+ROFI_THEME="$HOME/.config/rofi/wallpaper-picker.rasi"
 
 mkdir -p "$CACHEDIR"
 
