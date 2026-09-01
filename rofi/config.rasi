@@ -1,0 +1,96 @@
+
+
+@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/fonts.rasi"
+
+window {
+    enabled: true;
+    fullscreen: false;
+    transparency: "real";
+    cursor: "default";
+    spacing: 0px;
+    border: 0px;
+    border-radius: 14px;
+    location: center;
+    anchor: center;
+    width: 30%;
+    background-color: @background;
+}
+inputbar {
+    enabled: true;
+    spacing: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+entry {
+    enabled: true;
+    background-color: transparent;
+    text-color: inherit;
+    cursor: text;
+    placeholder: "Search...";
+    placeholder-color: inherit;
+}
+listview {
+    enabled: true;
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 5px;
+    padding: 10px;
+    margin: 0px;
+    background-color: transparent;
+}
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     5px;
+    border-radius:               5px;
+    background-color:            transparent;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @tertiary;
+}
+element normal.active {
+    background-color:            @active;
+    text-color:                  @selected-text;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @selected-text;
+}
+
+element selected.active {
+    background-color:            @active;
+    text-color:                  @selected-text;
+}
+// Adapt rofi theme
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @tertiary;
+}
+element alternate.active {
+    background-color:            @active;
+    text-color:                  @selected-text;
+}
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+
+}
