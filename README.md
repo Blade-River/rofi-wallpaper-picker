@@ -20,8 +20,8 @@ Designed primarily for **Hyprland**, but the script can be launched from a termi
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+git clone https://github.com/Blade-River/rofi-wallpaper-picker.git
+cd rofi-wallpaper-picker
 ```
 
 ### 2. Copy the Rofi configuration
@@ -37,13 +37,6 @@ If your repository contains a specific Rofi config file, you can instead copy it
 ```bash
 cp rofi/<your-rofi-file> ~/.config/rofi/
 ```
-
-Your Rofi configuration should be located inside:
-
-```text
-~/.config/rofi/
-```
-
 ---
 
 ### 3. Copy the scripts
@@ -58,11 +51,8 @@ cp scripts/* ~/.config/rofi/scripts/
 Make the wallpaper script executable:
 
 ```bash
-chmod +x ~/.config/rofi/scripts/<script-name>
+chmod +x ~/.config/rofi/scripts/wallpaper-picker.sh
 ```
-
-Replace `<script-name>` with the actual name of your wallpaper script.
-
 ---
 
 ## 🖼️ Configure Your Wallpaper Directory
@@ -70,30 +60,17 @@ Replace `<script-name>` with the actual name of your wallpaper script.
 Open the wallpaper script:
 
 ```bash
-nano ~/.config/rofi/scripts/<script-name>
+nano ~/.config/rofi/scripts/wallpaper-picker.sh
 ```
 
 Find:
 
 ```bash
 # wallpaper folder
-WALLDIR="/home/anubhav/Pictures/O/"
+WALLDIR="$HOME/Pictures/"
 ```
 
 Change it to the directory where **your wallpapers are stored**.
-
-For example:
-
-```bash
-# wallpaper folder
-WALLDIR="/home/username/Pictures/Wallpapers/"
-```
-
-Make sure the directory exists:
-
-```bash
-ls "$WALLDIR"
-```
 
 ---
 
@@ -102,15 +79,8 @@ ls "$WALLDIR"
 You can run the script directly from the terminal:
 
 ```bash
-~/.config/rofi/scripts/<script-name>
+~/.config/rofi/scripts/wallpaper-picker.sh
 ```
-
-Or, if you're inside the repository:
-
-```bash
-./scripts/<script-name>
-```
-
 ---
 
 ## ⌨️ Hyprland Keybind
@@ -126,7 +96,7 @@ nano ~/.config/hypr/hyprland.conf
 Add something like:
 
 ```ini
-bind = SUPER, W, exec, ~/.config/rofi/scripts/<script-name>
+bind = SUPER, W, exec, ~/.config/rofi/scripts/wallpaper-picker.sh
 ```
 
 Reload Hyprland:
@@ -153,9 +123,13 @@ After installation, your configuration may look like:
 ~/.config/
 ├── rofi/
 │   ├── config.rasi
-│   ├── wallpaper.rasi
+|   ├── colors.rasi
+|   ├── fonts.rasi
+|   ├── colors.rasi
+|   ├── matugen-rofi.rasi
+│   ├── wallpaper-picker.rasi
 │   └── scripts/
-│       └── wallpaper.sh
+│       └── wallpaper-picker.sh
 │
 └── hypr/
     └── hyprland.conf
@@ -173,9 +147,6 @@ For Arch Linux:
 sudo pacman -S rofi
 ```
 
-If your script uses a specific wallpaper utility such as `swww`, `hyprpaper`, or `feh`, install the one required by the script.
-
-For example, for `swww`:
 
 ```bash
 sudo pacman -S swww
@@ -183,51 +154,6 @@ sudo pacman -S swww
 
 ---
 
-## 🔧 Troubleshooting
-
-### Script doesn't run
-
-Make sure it is executable:
-
-```bash
-chmod +x ~/.config/rofi/scripts/<script-name>
-```
-
-Then try running it manually:
-
-```bash
-~/.config/rofi/scripts/<script-name>
-```
-
-### Wallpapers aren't appearing
-
-Check your wallpaper directory:
-
-```bash
-ls "/path/to/your/wallpapers/"
-```
-
-Then make sure `WALLDIR` points to that directory:
-
-```bash
-WALLDIR="/path/to/your/wallpapers/"
-```
-
-### Rofi configuration isn't loading
-
-Make sure your Rofi files are inside:
-
-```text
-~/.config/rofi/
-```
-
-You can check with:
-
-```bash
-ls ~/.config/rofi/
-```
-
----
 
 ## 📄 License
 
