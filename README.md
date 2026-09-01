@@ -122,9 +122,6 @@ After installation, your configuration may look like:
 ```text
 ~/.config/
 ├── rofi/
-│   ├── config.rasi
-|   ├── colors.rasi
-|   ├── fonts.rasi
 |   ├── colors.rasi
 |   ├── matugen-rofi.rasi
 │   ├── wallpaper-picker.rasi
