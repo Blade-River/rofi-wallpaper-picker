@@ -51,4 +51,4 @@ selected=$(echo -en "$entries" | rofi \
 [ -z "$selected" ] && exit
 
 # set wallpaper
-bash /home/anubhav/.config/scripts/SetWallpaper.sh "$WALLDIR/$selected"
+swww img "$image" --transition-type random --transition-duration 1.5 "$WALLDIR/$selected"
